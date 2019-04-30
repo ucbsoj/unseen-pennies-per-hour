@@ -23,6 +23,7 @@ iframe{
 
 #topper{
 	color:@white;
+  overflow: hidden;
 	position: relative;
 	padding-bottom: 4em;
 
@@ -167,4 +168,29 @@ hr{
 }
 @media (max-aspect-ratio: 16/9) {
     .video-foreground { width: 300%; left: -100%; }
+}
+
+
+
+#two{
+
+	p{
+		margin:0 auto 1em 20vw;
+		max-width: 550px;
+	}
+
+}
+
+
+
+.img-scroller{
+	max-width: 300px;
+	margin: 0 20px 0 0;
+  float: right;
+
+  &.fixed{
+  	position:fixed;
+  	top:0;
+  	right:0;
+  }
 }
