@@ -238,15 +238,142 @@ hr{
     margin-right: 5px;
 }
 
+.dropcap.r{
+	font-size: 70px;
+	float:none;
+}
+
 .embed-container{
 	margin-bottom: 1em;
 }
 
 blockquote{
-  max-width: 730px;
- margin: auto;
- padding: 0 15px;
- margin-bottom: 1em;
- padding-right: 10px;
-  border-right: 4px solid #ccc;
+  	max-width: 730px;
+ 	margin: auto;
+ 	padding: 0 15px;
+ 	margin-bottom: 1em;
+ 	padding-right: 10px;
+  	border-right: 4px solid #ccc;
+	font-weight: bold;
+    line-height: 2.5rem;
+    padding-bottom: 20px;
 }
+
+
+#two blockquote{
+	max-width: 550px;
+	margin: 0 auto 1em 20vw;
+
+    cite{
+    	display: block;
+    	margin-top: 20px;
+    	font-weight: normal;
+    	line-height: 1.8rem;
+    }
+}
+
+figure{
+	max-width: 730px;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	display: block;
+
+	figcaption{
+		font-size: 1rem;
+		margin: 0 0 20px 0;
+		display: block;
+		color: #777;
+		overflow: auto;
+  		zoom: 1;
+	}
+}
+
+
+
+figure.float-left {
+	img{
+		float: left;
+		max-width: 365px;
+		margin-right: 15px;
+		margin-left: 15px;
+	}
+	figcaption{
+		clear:left;
+		float:left;
+		max-width: 365px;
+		width: 100%;
+		margin-left: 15px;
+		margin-bottom: 0;
+	}
+	@media (max-width:525px){
+		img{
+			float:none;
+			max-width: 730px;
+			margin: 0;
+			padding: 0 15px;
+		}
+		figcaption{
+			float:none;
+			max-width: 730px;
+			margin: 0;
+			padding: 0 15px;
+		}
+	}
+}
+
+figure.float-right {
+	img{
+		float: right;
+		max-width: 365px;
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+	figcaption{
+		clear:right;
+		float:right;
+		max-width: 365px;
+		width: 100%;
+		margin-right: 15px;
+		margin-bottom: 0;
+	}
+
+	@media (max-width:525px){
+		img{
+			float:none;
+			max-width: 730px;
+			margin: 0;
+			padding: 0 15px;
+		}
+		figcaption{
+			float:none;
+			max-width: 730px;
+			margin: 0;
+			padding: 0 15px;
+		}
+	}
+}
+
+
+/* Main title fade up */
+
+#title-main,
+#title-deck,
+#title-byline{
+	opacity: 0;
+	transition: opacity 2s;
+}
+
+#title-main{
+	transition-delay: 3s;
+}
+
+#title-deck{
+	transition-delay: 5s;
+}
+
+#title-byline{
+	transition-delay: 7s;
+}
+
+

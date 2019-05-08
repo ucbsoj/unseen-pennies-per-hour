@@ -72,3 +72,7 @@ $(document).scroll(function() {
 
 });
 
+
+//fade in the main titles
+$("#title-main,#title-deck,#title-byline").css("opacity", 1);
+
