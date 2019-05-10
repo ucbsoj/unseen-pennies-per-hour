@@ -1,6 +1,6 @@
 import $ from "jquery"; // importing jQuery, you can delete if not needed
 require("./lib/social"); // Twitter intent JS
-
+import s from 'skrollr';
 
 $(document).scroll(function() {
 
@@ -75,4 +75,10 @@ $(document).scroll(function() {
 
 //fade in the main titles
 $("#title-main,#title-deck,#title-byline").css("opacity", 1);
+
+
+ s.init({forceHeight:false});
+    $(window).load(function(){
+    s.refresh();
+    });
 
