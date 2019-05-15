@@ -38,7 +38,7 @@ iframe{
   	overflow: hidden;
 	position: fixed;
 	width: 100%;
-	top:0;
+	top:49px;
 	left:0;
 	z-index: -1;
 	padding-bottom: 4em;
@@ -70,6 +70,10 @@ iframe{
 			line-height: 1.2;
 			font-size: 0.9em;
 			text-shadow: 1px 1px 1px #333;
+
+			@media @mobile{
+				font-size:16px;
+			}
 		}
 	}
 
@@ -202,6 +206,11 @@ hr{
 	p{
 		margin:0 auto 1em 20vw;
 		max-width: 550px;
+
+
+		@media (max-width: 975px){
+			margin: 0 auto 1em;
+		}
 	}
 
 }
@@ -209,25 +218,56 @@ hr{
 
 
 .img-scroller{
-	max-width: 300px;
+	max-width: 600px;
 	margin:20px 30px 0 0;
-  	float: right;
+	float: right;
+  padding-top: 77px;
+
+  @media (max-width: 1470px){
+  	max-width: 450px;
+  }
+
+  @media (max-width: 1285px){
+  	max-width: 350px;
+  }
+
+  @media (max-width: 1170px){
+  	max-width: 300px;
+  }
+
+  @media (max-width: 1085px){
+  	max-width: 200px;
+  }
+
+  @media (max-width: 975px){
+  	display:none;
+  }
 
   &.fixed{
   	position:fixed;
   	top:0;
+
   	right:0;
   }
 }
 
-@media (max-width:1086px){
-	.img-scroller,
-	.img-scroller.fixed{
-		position: static;
-		width:100%;
-		height: auto;
+.slideshow{
+	max-width: 500px;
+	margin:0 auto 2.5em;
+	display: none;
+
+	@media (max-width: 975px){
 		display: block;
 	}
+
+	.caption{
+		font-family:@sans-serif;
+	}
+}
+
+.carousel-cell{
+  width: 100%;
+  overflow: hidden;
 }
 
 .dropcap {
