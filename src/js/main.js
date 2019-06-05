@@ -1,6 +1,9 @@
 import $ from "jquery"; // importing jQuery, you can delete if not needed
 require("./lib/social"); // Twitter intent JS
+import Flickity from "flickity";
 import s from 'skrollr';
+
+var flky = new Flickity( '.carousel', {});
 
 $(document).scroll(function() {
 
@@ -76,9 +79,34 @@ $(document).scroll(function() {
 //fade in the main titles
 $("#title-main,#title-deck,#title-byline").css("opacity", 1);
 
+$( document ).ready(function() {
 
- s.init({forceHeight:false});
-    $(window).load(function(){
-    s.refresh();
+  $( ".hamburger" ).click(function() {
+    $( ".menu" ).slideToggle( "slow", function() {
+      $( ".hamburger" ).hide();
+      $( ".cross" ).show();
     });
+  });
+
+  $( ".cross" ).click(function() {
+    $( ".menu" ).slideToggle( "slow", function() {
+      $( ".cross" ).hide();
+      $( ".hamburger" ).show();
+    });
+  });
+
+  $( ".menu ul" ).click(function() {
+    $( ".menu" ).slideToggle( "slow", function() {
+      $( ".cross" ).hide();
+      $( ".hamburger" ).show();
+    });
+  });
+
+});
+
+
+s.init({forceHeight:false});
+$(window).load(function(){
+  s.refresh();
+});
 
