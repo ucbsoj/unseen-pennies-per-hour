@@ -7,12 +7,12 @@ var flky = new Flickity('.carousel', {});
 s.init({
   forceHeight: false
 });
-
+console.log('hi');
 // $(document).ready(function(){
 //   s.refresh();
 // });
 
-$(document).ready(function() {
+
   $(document).scroll(function() {
 
     var scroll = $(document).scrollTop();
@@ -82,7 +82,7 @@ $(document).ready(function() {
 
   });
 
-});
+
 
 
 //fade in the main titles
