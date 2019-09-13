@@ -1,5 +1,4 @@
 import $ from "jquery"; // importing jQuery, you can delete if not needed
-require("./lib/social"); // Twitter intent JS
 import Flickity from "flickity";
 import s from 'skrollr';
 
@@ -109,4 +108,3 @@ s.init({forceHeight:false});
 $(window).load(function(){
   s.refresh();
 });
-
