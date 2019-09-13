@@ -4,6 +4,9 @@ import s from 'skrollr';
 
 var flky = new Flickity( '.carousel', {});
 
+
+
+$( document ).ready(function() {
 $(document).scroll(function() {
 
   var scroll = $(document).scrollTop();
@@ -71,6 +74,7 @@ $(document).scroll(function() {
     $(".img-scroller").removeClass("fixed");
   }
 
+  });
 
 });
 
