@@ -14043,56 +14043,7 @@ var _$skrollrMin_17 = { exports: {} };
 })(window, document);
 
 _$skrollrMin_17 = _$skrollrMin_17.exports
-var _$social_20 = {};
-'use strict';
-
-// Twitter Intent
-(function () {
-  if (window.__twitterIntentHandler) return;
-  var intentRegex = /twitter\.com\/intent\/(\w+)/,
-      windowOptions = 'scrollbars=yes,resizable=yes,toolbar=no,location=yes',
-      width = 550,
-      height = 420,
-      winHeight = screen.height,
-      winWidth = screen.width;
-
-  function handleIntent(e) {
-    e = e || window.event;
-    var target = e.target || e.srcElement,
-        m,
-        left,
-        top;
-
-    while (target && target.nodeName.toLowerCase() !== 'a') {
-      target = target.parentNode;
-    }
-
-    if (target && target.nodeName.toLowerCase() === 'a' && target.href) {
-      m = target.href.match(intentRegex);
-      if (m) {
-        left = Math.round(winWidth / 2 - width / 2);
-        top = 0;
-
-        if (winHeight > height) {
-          top = Math.round(winHeight / 2 - height / 2);
-        }
-
-        window.open(target.href, 'intent', windowOptions + ',width=' + width + ',height=' + height + ',left=' + left + ',top=' + top);
-        e.returnValue = false;
-        e.preventDefault && e.preventDefault();
-      }
-    }
-  }
-
-  if (document.addEventListener) {
-    document.addEventListener('click', handleIntent, false);
-  } else if (document.attachEvent) {
-    document.attachEvent('onclick', handleIntent);
-  }
-  window.__twitterIntentHandler = true;
-})();
-
-var _$main_21 = {};
+var _$main_20 = {};
 "use strict";
 
 /* removed: var _$jquery_16 = require("jquery"); */;
@@ -14110,10 +14061,16 @@ var _skrollr2 = _interopRequireDefault(_$skrollrMin_17);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // importing jQuery, you can delete if not needed
-_$social_20; // Twitter intent JS
-
-
 var flky = new _flickity2.default('.carousel', {});
+
+_skrollr2.default.init({
+  forceHeight: false
+});
+console.log('hi');
+// $(document).ready(function(){
+//   s.refresh();
+// });
+
 
 (0, _jquery2.default)(document).scroll(function () {
 
@@ -14183,7 +14140,7 @@ var flky = new _flickity2.default('.carousel', {});
 });
 
 //fade in the main titles
-(0, _jquery2.default)("#title-main,#title-deck,#title-byline").css("opacity", 1);
+// $("#title-main,#title-deck,#title-byline").css("opacity", 1);
 
 (0, _jquery2.default)(document).ready(function () {
 
@@ -14207,11 +14164,6 @@ var flky = new _flickity2.default('.carousel', {});
       (0, _jquery2.default)(".hamburger").show();
     });
   });
-});
-
-_skrollr2.default.init({ forceHeight: false });
-(0, _jquery2.default)(window).load(function () {
-  _skrollr2.default.refresh();
 });
 
 }());
